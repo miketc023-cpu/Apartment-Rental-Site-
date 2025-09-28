@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandy and Leslie's Apartment</title>
+    <link rel="stylesheet" href="apartment_layout.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 600px)">
+    <link rel="stylesheet" href="print.css" media="print">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            border: 2px solid #999;
+            background-color: white;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: Arial, sans-serif;
+        }
+        th {
+            background-color:#f2f2f2;
+            color:black;
+            }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #ffcc00;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        .gallery {
+           display: flex;
+		   flex-wrap: wrap;
+           text-align: center;
+           gap: 20px;
+           padding: 20px;
+        }
+
+        .picture {
+          width: 200px;
+          text-align: center;
+        }
+
+        .picture img {
+          width: 200px;
+          height: 180px;
+          border: 2px solid #333;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .map {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        form {
+            margin: 10px 0;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        .audio {
+            margin-bottom: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .transcript {
+            background-color: #f9f9f9;
+            padding: 10px;
+            font-style: italic;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+
+          .audio, form, nav {
+           display: none;
+        }
+
+           body {
+           font-family: serif;
+           font-size: 12pt;
+        }
+
+          .grid-container {
+           display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sandy and Leslie's Apartment</h1>
+            <p>Click a room for a detailed view</p>
+        </header>
+
+       
+        <div class="map">
+            <img src="../Image/Ads/apartmentfloorplan.jpg" alt="Apartment Floor Plan" usemap="#apartment-map"> 
+            <map name="#apartment-map">
+               <area shape="rect" coords="40,100,170,240" alt="Bedroom 1" href="Bedroom1.html">
+               <area shape="rect" coords="220,100,350,240" alt="Living Room" href="Living Room.html">
+               <area shape="rect" coords="450,100,550,240" alt="Bedroom 2" href="Bedroom2.html">
+               <area shape="rect" coords="250,320,350,380" alt="Dining Room" href="DiningRoom.html">
+               <area shape="rect" coords="170,300,240,380" alt="Kitchen" href="kitchen.html">
+            </map>
+        </div>
+
+        <nav>
+            <a href="apartment_pagemap.html">Apartment</a> |
+            <a href="Bedroom1.html">Bedroom 1</a> |
+            <a href="Bedroom2.html">Bedroom 2</a> |
+            <a href="DiningRoom.html">Dining Room</a> |
+            <a href="kitchen.html">Kitchen</a> |
+            <a href="Living Room.html">Living Room</a>
+        </nav>
+
+        <main>
+            <div class="grid-container">
+                <div>
+                    <div class="header">Welcome Message</div>
+                    <div class="audio">
+                        <audio controls>
+                            <source src="../Image/Ads/apartment.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="transcript">
+                        <p>Transcript: "Hello. Welcome to our apartment. You'll really enjoy living here. The rooms are spacious and the apartment building amenities are fantastic. We look forward to hearing from you!"</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="header">Apartment services:</div>
+                    <table>
+                        <tr>
+                          <th style="background-color: #D3D3D3;">Service</th>
+                          <th style="background-color: #D3D3D3;">Day/Hours</th>
+                        </tr>
+                        <tr>
+                            <td>Gym and Pool</td>
+                            <td>Monday-Friday 6am - 10pm<br>Saturday 8am - 8pm<br>Sunday 8am - 5pm</td>
+                        </tr>
+                        <tr>
+                            <td>Laundry</td>
+                            <td>24 hours, 7 days per week</td>
+                        </tr>
+                        <tr>
+                        <td colspan="2" style="background-color:#90EE90; color: white;">Please let us know if there are any amenities you would like to see added or changed.</td>   
+                        </tr>
+                    </table>
+                </div>
+                
+                <div>
+                    <div class="header">Location</div>
+                    <img src="../Image/Ads/location.png" alt="Apartment Location Map">
+                </div>
+            </div>
+
+         
+            <div>
+                <div class="header">Survey</div>
+                <form>
+                    <fieldset>
+                        <legend>How did you find out about this apartment?</legend>
+                        <p>(check any that apply)</p>
+
+                        <input type="checkbox" id="web" name="source" value="web">
+                        <label for="web">Web search</label>
+
+                        <input type="checkbox" id="friend" name="source" value="friend">
+                        <label for="friend">Friend</label>
+
+                        <input type="checkbox" id="newspaper" name="source" value="newspaper">
+                        <label for="newspaper">Newspaper</label>
+                    </fieldset>
+
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset Form</button>
+                </form>
+            </div>
+
+            <div>
+                <div class="header">Gallery</div>
+                <div class="gallery">
+                    <div class="picture">
+                        <h3>Balcony</h3>
+                        <img src="../Image/Ads/balcony.jpg" alt="Balcony">
+                    </div>
+                    <div class="picture">
+                        <h3>Bathroom</h3>
+                        <img src="../Image/thumbnails/bathroom_sm.jpg" alt="Bathroom">
+                    </div>
+                    <div class="picture">
+                        <h3>Bedroom</h3>
+                        <img src="../Image/Ads/bedroom_lg.jpg" alt="Bedroom" style="width:200px;height:180px;">
+                    </div>
+                    <div class="picture">
+                        <h3>Dining Room</h3>
+                        <img src="../Image/Ads/diningroom_lg.jpg" alt="Dining Room">
+                    </div>
+                    <div class="picture">
+                        <h3>Kitchen</h3>
+                        <img src="../Image/Ads/kitchen_lg.jpg" alt="Kitchen">
+                    </div>
+                    <div class="pciture">
+                        <h3>Living Room</h3>
+                        <img src="../Image/Ads/livingroom_lg.jpg" alt="Living Room" style="width:200px; height:180px;">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>For more information contact: <a href="mailto:Sandy@apartment.com">Sandy@apartment.com<a href="tel:9055551234">(905) 555-1234</a></p>
+            <p>&copy; Sandy and Leslie 2022</p>
+        </footer>
+    </div>
+</body>
+</html> 
